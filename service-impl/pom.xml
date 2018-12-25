@@ -22,5 +22,11 @@
 			<artifactId>repository</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.glinboy.feader</groupId>
+			<artifactId>repository-impl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

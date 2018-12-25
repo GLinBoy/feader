@@ -27,5 +27,11 @@
 			<artifactId>service</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.glinboy.feader</groupId>
+			<artifactId>service-impl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>
