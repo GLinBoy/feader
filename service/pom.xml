@@ -12,14 +12,14 @@
 	</parent>
 
 	<groupId>com.glinboy.feader</groupId>
-	<artifactId>service</artifactId>
-	<name>service</name>
+	<artifactId>service-api</artifactId>
+	<name>service-api</name>
 	<url>http://maven.apache.org</url>
 	
 	<dependencies>
 		<dependency>
 			<groupId>com.glinboy.feader</groupId>
-			<artifactId>repository</artifactId>
+			<artifactId>model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

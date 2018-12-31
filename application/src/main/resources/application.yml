@@ -1,0 +1,6 @@
+server:
+  port: 8181
+spring:
+  h2:
+    console:
+      enabled: true

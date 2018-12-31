@@ -12,8 +12,8 @@
 	</parent>
 
 	<groupId>com.glinboy.feader</groupId>
-	<artifactId>repository</artifactId>
-	<name>repository</name>
+	<artifactId>repository-api</artifactId>
+	<name>repository-api</name>
 	<url>http://maven.apache.org</url>
 	
 	<dependencies>
@@ -21,6 +21,11 @@
 			<groupId>com.glinboy.feader</groupId>
 			<artifactId>model</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 </project>

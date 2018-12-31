@@ -19,13 +19,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.glinboy.feader</groupId>
-			<artifactId>repository</artifactId>
+			<artifactId>service-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.glinboy.feader</groupId>
-			<artifactId>repository-impl</artifactId>
+			<artifactId>repository-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
