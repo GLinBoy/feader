@@ -1,0 +1,10 @@
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (1,'Vestibulum ante ipsum','massa.Suspendisse@tempus.ca','eget');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (2,'elit. Etiam laoreet,','cursus@miDuis.net','tellus justo');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (3,'semper, dui lectus rutrum urna,','urna.Ut@cubiliaCurae.edu','Aenean eget');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (4,'et malesuada fames ac turpis','et@diam.org','accumsan laoreet');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (5,'rutrum non, hendrerit id, ante.','a.magna.Lorem@Nunc.net','Proin');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (6,'egestas hendrerit neque.','eu.enim.Etiam@diamProindolor.co.uk','lobortis quis,');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (7,'vehicula et, rutrum eu,','interdum.ligula.eu@sollicitudin.edu','elit.');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (8,'massa rutrum','sagittis.felis.Donec@Inat.co.uk','risus, at');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (9,'dolor','mi.pede@PraesentluctusCurabitur.net','non, vestibulum');
+INSERT INTO FEED (ID,DESCRIPTION,LINK,TITLE) VALUES (10,'non,','volutpat.ornare.facilisis@sit.co.uk','quam a felis');
