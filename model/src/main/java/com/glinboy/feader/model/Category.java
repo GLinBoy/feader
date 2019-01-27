@@ -1,6 +1,9 @@
 package com.glinboy.feader.model;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,4 +19,6 @@ public class Category extends BaseModel {
 	private String name;
 	private Integer weight;
 
+	@ManyToMany(mappedBy="category")
+	private Set<Feed> feeds;
 }
