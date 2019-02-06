@@ -16,13 +16,13 @@ public class FeedEntry extends BaseModel {
 
 	private static final long serialVersionUID = -7086809764656937022L;
 	
-	@Column(length=50)
+	@Column(length=128)
 	private String title;
 	
 	@Lob
 	private String description;
 	
-	@Column(length=256)
+	@Column(length=512)
 	private String link;
 	
 	@Column(length=64)
