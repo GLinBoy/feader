@@ -22,7 +22,7 @@
 					<div class="uk-navbar-left">
 						<div class="uk-navbar-item uk-hidden@m">
 							<a class="uk-logo" href="#"><img class="custom-logo"
-								src="/dashboard-logo-white.png" alt=""></a>
+								src="dashboard-logo-white.png" alt=""></a>
 						</div>
 						<ul class="uk-navbar-nav uk-visible@m">
 							<li><a href="#">Accounts</a></li>
@@ -177,20 +177,38 @@
 				<div>
 					<ul class="uk-breadcrumb">
 					    <li><a href="/">Home</a></li>
-					    <li><a th:href="@{'/feeds/' + ${entry.feed.id}}"  th:text="${entry.feed.title}"></a></li>
-					    <li><span th:text="${entry.title}"></span></li>
+					    <li><span th:text="${feed.title}"></span></li>
 					</ul>
 				</div>
-				<article class="uk-article">
-					<h1 th:text="${entry.title}" class="uk-article-title"></h1>
-					<p th:text="@{'by ' + ${entry.author}}" class="uk-article-meta"></p>
-					<hr>
-					<div>
-						<!-- CARDS -->
-						<p th:text="${entry.description}"></p>
-						<!-- /CARDS -->
-					</div>
-				</article>
+				<div>
+					<!-- CARDS -->
+					<div  th:each="entry,iterStat : ${feed.entries}" th:class="${iterStat.odd}? 'blog-card' : 'blog-card alt'">
+					    <div class="meta">
+					      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+					      <ul class="details">
+					        <li class="author"><a href="#">John Doe</a></li>
+					        <li class="date">Aug. 24, 2015</li>
+					        <li class="tags">
+					          <ul>
+					            <li><a href="#">Learn</a></li>
+					            <li><a href="#">Code</a></li>
+					            <li><a href="#">HTML</a></li>
+					            <li><a href="#">CSS</a></li>
+					          </ul>
+					        </li>
+					      </ul>
+					    </div>
+					    <div class="description">
+					      <h1 th:text="${entry.title}"></h1>
+					      <h2>Opening a door to the future</h2>
+					      <p th:text="${entry.description}"/>
+					      <p class="read-more">
+					        <a th:href="@{'/entries/' + ${entry.id}}">Read More</a>
+					      </p>
+					    </div>
+					  </div>
+					<!-- /CARDS -->
+				</div>
 				<footer class="uk-section uk-section-small uk-text-center">
 					<hr class="uk-divider-icon">
 					<p class="uk-text-small uk-text-center">
@@ -243,5 +261,6 @@
 	<script src="/webjars/uikit/dist/js/uikit.min.js"></script>
 	<script src="/webjars/uikit/dist/js/uikit-icons.min.js"></script>
 	<script src="/webjars/chart.js/dist/Chart.min.js"></script>
+	<script src="/js/chartScripts.js"></script>
 </body>
 </html>

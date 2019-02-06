@@ -1,5 +1,6 @@
 package com.glinboy.feader.model;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -30,7 +31,7 @@ public class Feed extends BaseModel {
     		joinColumns = @JoinColumn(name = "feed_id", nullable=false),
             inverseJoinColumns = @JoinColumn(name = "category_id", nullable=false))
     private Set<Category> category;
-    
+
     @OneToMany(mappedBy="feed")
-    private Set<FeedEntry> entries;
+    private List<FeedEntry> entries;
 }

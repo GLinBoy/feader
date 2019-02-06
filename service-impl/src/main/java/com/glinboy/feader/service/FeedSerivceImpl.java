@@ -13,8 +13,11 @@ public class FeedSerivceImpl
 	extends FeederGenericServiceImpl<Feed, FeedRepositoryApi>
 	implements FeedServiceApi{
 	
+	private final FeedRepositoryApi repository;
+	
 	FeedSerivceImpl(FeedRepositoryApi repository) {
 		super(repository);
+		this.repository = repository;
 	}
 
 }

@@ -30,7 +30,7 @@ insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (1, 4);
 insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (3, 5);
 insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (7, 5);
 insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (10, 4);
-insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (9, 2);
+insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (2, 2);
 insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (10, 3);
 insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (5, 4);
 insert into FEED_CATEGORY  (FEED_ID, CATEGORY_ID) values (4, 3);
