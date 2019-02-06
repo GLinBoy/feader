@@ -1,6 +1,5 @@
 package com.glinboy.feader.model;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -11,12 +10,16 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=true)
+@EqualsAndHashCode(callSuper=true, exclude="entries")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Feed extends BaseModel {
 
 	private static final long serialVersionUID = 7720285113632455831L;
@@ -37,5 +40,5 @@ public class Feed extends BaseModel {
     private Set<Category> category;
 
     @OneToMany(mappedBy="feed")
-    private List<FeedEntry> entries;
+    private Set<FeedEntry> entries;
 }

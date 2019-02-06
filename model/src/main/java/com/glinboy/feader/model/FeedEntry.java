@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=true)
+@EqualsAndHashCode(callSuper=true, exclude="feed")
 public class FeedEntry extends BaseModel {
 
 	private static final long serialVersionUID = -7086809764656937022L;
