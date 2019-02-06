@@ -3,6 +3,7 @@ package com.glinboy.feader.model;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -20,7 +21,10 @@ public class Feed extends BaseModel {
 
 	private static final long serialVersionUID = 7720285113632455831L;
 	
+	@Column(length=50)
 	private String title;
+	
+	@Column(length=256)
     private String link;
     
     @Lob

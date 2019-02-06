@@ -2,6 +2,7 @@ package com.glinboy.feader.model;
 
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
@@ -16,7 +17,9 @@ public class Category extends BaseModel {
 	
 	private static final long serialVersionUID = -8390228973883986191L;
 
+	@Column(length=15)
 	private String name;
+
 	private Integer weight;
 
 	@ManyToMany(mappedBy="category")
