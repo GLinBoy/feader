@@ -17,10 +17,11 @@ public class Category extends BaseModel {
 	
 	private static final long serialVersionUID = -8390228973883986191L;
 
-	@Column(length=15)
+	@Column(length=15, nullable=false)
 	private String name;
 
-	private Integer weight;
+	@Column(nullable=false)
+	private Short weight;
 
 	@ManyToMany(mappedBy="category")
 	private Set<Feed> feeds;
