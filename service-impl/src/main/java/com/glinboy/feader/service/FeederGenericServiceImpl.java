@@ -27,9 +27,9 @@ public abstract class FeederGenericServiceImpl<T extends BaseModel, S extends Jp
 	@Transactional
 	public T update(T t) {
 		final Long id = t.getId();
-		t = repository.findById(id).orElseThrow(() -> new RuntimeException("Resource found with id = " + id));
+		T obj = repository.findById(id).orElseThrow(() -> new RuntimeException("Resource found with id = " + id));
 		// FIXME Handle update;
-		return repository.save(t);
+		return repository.save(obj);
 	}
 
 	@Override

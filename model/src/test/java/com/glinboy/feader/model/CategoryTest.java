@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class CategoryTest extends ModelTest<Category> {
 
 	private Category category;
-	
+
 	@BeforeEach
 	public void setupFreshCategory() {
 
@@ -23,17 +23,18 @@ public class CategoryTest extends ModelTest<Category> {
 		this.category.setFeeds(new HashSet<Feed>() {
 			private static final long serialVersionUID = -1187221931202361314L;
 
-		{
-			add(feed);
-		}});
+			{
+				add(feed);
+			}
+		});
 	}
-	
+
 	@Test
 	public void newCategory() {
-		
+
 		assertThat(this.category.getId()).isEqualTo(1L);
 		assertThat(this.category.getName()).isEqualTo("Test Category");
-		assertThat(this.category.getWeight()).isEqualTo((short)1);
+		assertThat(this.category.getWeight()).isEqualTo((short) 1);
 		assertThat(this.category.getFeeds().stream().mapToLong(Feed::getId)).containsAnyOf(1L);
 	}
 
@@ -46,5 +47,5 @@ public class CategoryTest extends ModelTest<Category> {
 	public Class<Category> getCurrentModelClass() {
 		return Category.class;
 	}
-		
+
 }

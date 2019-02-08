@@ -12,7 +12,7 @@ public abstract class ModelTest<T> {
 	public abstract Class<T> getCurrentModelClass();
 
 	@Test
-	void checkFeedFields() throws IllegalArgumentException, IllegalAccessException {
+	public 	void checkFeedFields() throws IllegalArgumentException, IllegalAccessException {
 		Field[] allFields = getCurrentModelClass().getDeclaredFields();
 	    for (Field field : allFields) {
 	    	field.setAccessible(true);

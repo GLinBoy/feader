@@ -1,5 +1,6 @@
 package com.glinboy.feader.service;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import com.glinboy.feader.model.Feed;
@@ -13,11 +14,8 @@ public class FeedSerivceImpl
 	extends FeederGenericServiceImpl<Feed, FeedRepositoryApi>
 	implements FeedServiceApi{
 	
-	private final FeedRepositoryApi repository;
-	
-	FeedSerivceImpl(FeedRepositoryApi repository) {
+	FeedSerivceImpl(JpaRepository<Feed, Long> repository) {
 		super(repository);
-		this.repository = repository;
 	}
-
+	
 }
