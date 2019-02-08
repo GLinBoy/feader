@@ -2,56 +2,54 @@ package com.glinboy.feader.model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.lang.reflect.Field;
 import java.util.HashSet;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class FeedTest {
+public class FeedTest extends ModelTest<Feed>{
 
-	@Test
-	void newFeed() {
-		Feed feed = new Feed();
-		feed.setId(1L);
-		feed.setTitle("GLinBoy");
-		feed.setLink("https://blog.glinboy.com/feeds/posts/default");
-		feed.setDescription("GLinBoy's blog about programming & developing"
+	private Feed feed;
+
+	@BeforeEach
+	public void setupFreshFeed() {
+		this.feed = new Feed();
+		this.feed.setId(1L);
+		this.feed.setTitle("GLinBoy");
+		this.feed.setLink("https://blog.glinboy.com/feeds/posts/default");
+		this.feed.setDescription("GLinBoy's blog about programming & developing"
 				+ "(cover Java, Python, C++, Rust, Go, Elixir and their frameworks)");
 		Category category = new Category();
 		category.setId(1L);
 		category.setName("unnamed");
 		category.setWeight((short) 1);
-		feed.setCategory(new HashSet<Category>() {
+		this.feed.setCategory(new HashSet<Category>() {
 			private static final long serialVersionUID = -2952632067668036802L;
 			{
 				add(category);
 			}
 		});
-
-		assertThat(feed.getId()).isEqualTo(1L);
-		assertThat(feed.getTitle()).isEqualTo("GLinBoy");
-		assertThat(feed.getLink()).isEqualTo("https://blog.glinboy.com/feeds/posts/default");
-		assertThat(feed.getDescription()).isEqualTo("GLinBoy's blog about programming & developing"
-				+ "(cover Java, Python, C++, Rust, Go, Elixir and their frameworks)");
-		assertThat(feed.getCategory().stream().mapToLong(Category::getId)).containsAnyOf(category.getId());
+		this.feed.setEntries(new HashSet<FeedEntry>());
 	}
 
 	@Test
-	void checkFeedFields() throws IllegalArgumentException, IllegalAccessException {
-		Feed feed = new Feed();
-		feed.setId(1L);
-		feed.setTitle("GLinBoy");
-		feed.setLink("https://blog.glinboy.com/feeds/posts/default");
-		feed.setDescription("GLinBoy's blog about programming & developing"
+	void newFeed() {
+		assertThat(this.feed.getId()).isEqualTo(1L);
+		assertThat(this.feed.getTitle()).isEqualTo("GLinBoy");
+		assertThat(this.feed.getLink()).isEqualTo("https://blog.glinboy.com/feeds/posts/default");
+		assertThat(this.feed.getDescription()).isEqualTo("GLinBoy's blog about programming & developing"
 				+ "(cover Java, Python, C++, Rust, Go, Elixir and their frameworks)");
-		feed.setCategory(new HashSet<Category>());
-		feed.setEntries(new HashSet<FeedEntry>());
+		assertThat(this.feed.getCategory().stream().mapToLong(Category::getId)).containsAnyOf(1L);
+	}
 
-	    Field[] allFields = Feed.class.getDeclaredFields();
-	    for (Field field : allFields) {
-	    	field.setAccessible(true);
-	    	assertThat(field.get(feed)).isNotNull();
-	    }
+	@Override
+	public Feed getCurrentModelObject() {
+		return this.feed;
+	}
+
+	@Override
+	public Class<Feed> getCurrentModelClass() {
+		return Feed.class;
 	}
 
 }
