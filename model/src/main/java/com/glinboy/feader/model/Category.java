@@ -17,7 +17,7 @@ public class Category extends BaseModel {
 	
 	private static final long serialVersionUID = -8390228973883986191L;
 
-	@Column(length=15, nullable=false)
+	@Column(length=32, nullable=false)
 	private String name;
 
 	@Column(nullable=false)
