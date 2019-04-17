@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:each="entry,iterStat : ${entries}"
+		th:class="${iterStat.odd}? 'blog-card' : 'blog-card alt'"
+		 th:fragment="card">
+		<div class="meta">
+			<div class="photo"
+				style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+			<ul class="details">
+				<li class="author"><a href="#">John Doe</a></li>
+				<li class="date">Aug. 24, 2015</li>
+				<li class="tags">
+					<ul>
+						<li><a href="#">Learn</a></li>
+						<li><a href="#">Code</a></li>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="description">
+			<h1 th:text="${entry.title}"></h1>
+			<h2>Opening a door to the future</h2>
+			<p th:text="${entry.description}" />
+			<p class="read-more">
+				<a th:href="@{'/entries/' + ${entry.id}}">Read More</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
