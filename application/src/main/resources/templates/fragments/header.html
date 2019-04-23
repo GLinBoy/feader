@@ -8,18 +8,27 @@
 		<div class="uk-container uk-container-expand uk-background-primary">
 			<nav class="uk-navbar uk-light"
 				data-uk-navbar="mode:click; duration: 250">
-				<div class="uk-navbar-left">
-					<div class="uk-navbar-item uk-hidden@m">
-						<a class="uk-logo" href="#"><img class="custom-logo"
-							src="dashboard-logo-white.png" alt=""></a>
+				<div>
+					<a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+					<div class="uk-drop"
+						uk-drop="mode: click; pos: left-center; offset: 0">
+						<form class="uk-search uk-search-navbar uk-width-1-1">
+							<input class="uk-search-input" type="search"
+								placeholder="Search..." autofocus>
+						</form>
 					</div>
-					<ul class="uk-navbar-nav uk-visible@m">
-						<li><a href="#">Accounts</a></li>
-						<li><a href="#">Settings <span
-								data-uk-icon="icon: triangle-down"></span></a>
-							<div class="uk-navbar-dropdown">
-								<ul class="uk-nav uk-navbar-dropdown-nav">
-									<li class="uk-nav-header">YOUR ACCOUNT</li>
+				</div>
+				<div class="uk-navbar-right">
+					<ul class="uk-navbar-nav">
+						<li><a href="#" data-uk-icon="icon:user" title="Your profile"
+							data-uk-tooltip></a> <!-- user dropdown -->
+							<div class="uk-dropdown user-drop"
+								data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+								<img src="avatar.svg" alt=""
+									class="uk-border-circle profile-img">
+								<h4 class="uk-text-center uk-margin-remove-vertical"
+									style="color: black;">John Doe</h4>
+								<ul class="uk-nav uk-dropdown-nav uk-text-left">
 									<li><a href="#"><span data-uk-icon="icon: info"></span>
 											Summary</a></li>
 									<li><a href="#"><span data-uk-icon="icon: refresh"></span>
@@ -31,46 +40,9 @@
 											Your Data</a></li>
 									<li class="uk-nav-divider"></li>
 									<li><a href="#"><span data-uk-icon="icon: sign-out"></span>
-											Logout</a></li>
+											Sign Out</a></li>
 								</ul>
-							</div></li>
-					</ul>
-					<div class="uk-navbar-item uk-visible@s">
-						<form action="dashboard.html" class="uk-search uk-search-default">
-							<span data-uk-search-icon></span> <input
-								class="uk-search-input search-field" type="search"
-								placeholder="Search">
-						</form>
-					</div>
-				</div>
-				<div class="uk-navbar-right">
-					<ul class="uk-navbar-nav">
-						<li>
-							<a href="#" data-uk-icon="icon:user" title="Your profile"
-								data-uk-tooltip></a>
-							<!-- user dropdown -->
-								<div class="uk-dropdown user-drop"
-									data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
-									<img src="avatar.svg" alt="" class="uk-border-circle profile-img">
-									<h4 class="uk-text-center uk-margin-remove-vertical text-light">John
-										Doe</h4>
-									<ul class="uk-nav uk-dropdown-nav uk-text-left">
-										<li><a href="#"><span data-uk-icon="icon: info"></span>
-												Summary</a></li>
-										<li><a href="#"><span data-uk-icon="icon: refresh"></span>
-												Edit</a></li>
-										<li><a href="#"><span data-uk-icon="icon: settings"></span>
-												Configuration</a></li>
-										<li class="uk-nav-divider"></li>
-										<li><a href="#"><span data-uk-icon="icon: image"></span>
-												Your Data</a></li>
-										<li class="uk-nav-divider"></li>
-										<li><a href="#"><span data-uk-icon="icon: sign-out"></span>
-												Sign Out</a></li>
-									</ul>
-								</div>
-							<!-- /user dropdown -->
-						</li>
+							</div> <!-- /user dropdown --></li>
 						<li><a href="#" data-uk-icon="icon: settings"
 							title="Settings" data-uk-tooltip></a></li>
 						<li><a href="#" data-uk-icon="icon:  sign-out"

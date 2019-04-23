@@ -18,7 +18,7 @@ import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=true, exclude="entries")
+@EqualsAndHashCode(callSuper=true, exclude= {"entries", "category"})
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Feed extends BaseModel {
 
