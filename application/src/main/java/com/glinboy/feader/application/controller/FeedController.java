@@ -22,6 +22,7 @@ public class FeedController {
 	public String viewFeed(@PathVariable("feed_id") Long id, Model model) {
 		Feed feed = feedService.getSingleById(id);
 		model.addAttribute("feed", feed);
-		return "feed";
+		model.addAttribute("entries", feed.getEntries());
+		return "fragments/content";
 	}
 }

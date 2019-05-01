@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
 
-	<div id="content" data-uk-height-viewport="expand: true"
-		th:fragment="content">
-		<div class="uk-container uk-container-expand">
-			<div>
-				<!-- CARDS -->
-				<div th:replace="fragments/components/card :: card"></div>
-				<!-- /CARDS -->
-			</div>
-			<div th:replace="fragments/footer :: footer">&copy; 2016 The
-				Static Templates</div>
+<div data-uk-height-viewport="expand: true"
+	th:fragment="content">
+	<div class="uk-container uk-container-expand">
+		<div>
+			<!-- CARDS -->
+			<div th:replace="fragments/components/card :: card"></div>
+			<!-- /CARDS -->
 		</div>
+		<div th:replace="fragments/footer :: footer">&copy; 2016 The
+			Static Templates</div>
 	</div>
-</body>
-</html>
+</div>

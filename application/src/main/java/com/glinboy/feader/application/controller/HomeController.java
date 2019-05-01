@@ -20,9 +20,14 @@ public class HomeController {
 	private final FeedEntryServiceApi feedEntryService;
 
 	@RequestMapping(path = {"", "/", "/index", "/index.html"})
-	String getHomePage(Model model, Pageable pageable) {
+	public String getHomePage(Model model, Pageable pageable) {
 		model.addAttribute("categories", categoryService.getAll(pageable).getContent());
 		model.addAttribute("entries", feedEntryService.getAll(pageable).getContent());
 		return "index";
+	}
+	
+	@RequestMapping(path = "/add", headers = "x-requested-with=XMLHttpRequest")
+	public String getAddFragment() {
+		return "AddNewFeed";
 	}
 }

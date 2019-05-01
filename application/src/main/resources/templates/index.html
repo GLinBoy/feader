@@ -4,9 +4,11 @@
 <title>Feader - Yet Another Feed Reader</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700"
+	rel="stylesheet" />
 <link rel="stylesheet" href="/webjars/uikit/dist/css/uikit.min.css" />
-<link rel="stylesheet" href="/webjars/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="/webjars/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
 <link th:href="@{/css/style.css}" rel="stylesheet" />
 
@@ -21,7 +23,9 @@
 		<div th:replace="fragments/left sidebar :: leftsidebar"></div>
 		<!-- /LEFT BAR -->
 		<!-- CONTENT -->
-		<div th:replace="fragments/content :: content"></div>
+		<div id="content">
+			<div th:replace="fragments/content :: content"></div>
+		</div>
 		<!-- /CONTENT -->
 		<!-- OFFCANVAS -->
 		<div th:replace="fragments/offcanvas :: offcanvas"></div>
@@ -34,5 +38,12 @@
 	<script src="/webjars/uikit/dist/js/uikit-icons.min.js"></script>
 	<script src="/webjars/chart.js/dist/Chart.min.js"></script>
 	<script src="/js/chartScripts.js"></script>
+	<script>
+		/*<![CDATA[*/
+		$("ul > li > ul > li > a").on("click", function() {
+			$("#content").load("/feeds/" + $(this).attr('feed_id'));
+		});
+		/*]]>*/
+	</script>
 </body>
 </html>

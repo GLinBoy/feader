@@ -14,8 +14,8 @@
 				<li class="uk-parent" th:each="category,iterStat : ${categories}">
 					<a href="#" th:text="${category.name}"></a>
 					<ul class="uk-nav-sub">
-						<li th:each="feed : ${category.feeds}"><a th:href="@{'/feeds/' + ${feed.id}}"
-							th:text="${feed.title}"></a></li>
+						<li th:each="feed : ${category.feeds}"><a th:text="${feed.title}"
+							th:feed_id="${feed.id}"></a></li>
 					</ul>
 				</li>
 			</ul>
