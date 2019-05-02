@@ -30,6 +30,10 @@
 		<!-- OFFCANVAS -->
 		<div th:replace="fragments/offcanvas :: offcanvas"></div>
 		<!-- /OFFCANVAS -->
+
+
+		<div th:replace="fragments/footer :: footer">&copy; 2016 The
+			Static Templates</div>
 	</div>
 
 	<!-- JS FILES -->
@@ -40,8 +44,15 @@
 	<script src="/js/chartScripts.js"></script>
 	<script>
 		/*<![CDATA[*/
-		$("ul > li > ul > li > a").on("click", function() {
-			$("#content").load("/feeds/" + $(this).attr('feed_id'));
+
+		$(document).ready(function() {
+			$('body').on('click', 'a[feed_id]', function() {
+				$("#content").load("/feeds/" + $(this).attr('feed_id'));
+			});
+
+			$('body').on('click', 'a[entry_id]', function() {
+				$("#content").load("/entries/" + $(this).attr('entry_id'));
+			});
 		});
 		/*]]>*/
 	</script>
