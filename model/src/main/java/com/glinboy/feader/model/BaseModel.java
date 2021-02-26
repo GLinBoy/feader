@@ -1,7 +1,5 @@
 package com.glinboy.feader.model;
 
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -18,7 +16,7 @@ public abstract class BaseModel implements Serializable {
 
 	private static final long serialVersionUID = 4044849860361438135L;
 	@Id
-    @GeneratedValue
-    @Column(name = "ID", updatable = false, nullable = false)
-    private Long id;
+	@GeneratedValue
+	@Column(name = "ID", updatable = false, nullable = false)
+	private Long id;
 }
