@@ -1,4 +1,4 @@
-package com.glinboy.feader.service;
+package com.glinboy.feader.service.impl;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.glinboy.feader.model.BaseModel;
+import com.glinboy.feader.service.FeederGenericServiceApi;
 
 public abstract class FeederGenericServiceImpl<T extends BaseModel, S extends JpaRepository<T, Long>>
 		implements FeederGenericServiceApi<T> {

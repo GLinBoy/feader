@@ -1,4 +1,4 @@
-package com.glinboy.feader.application.controller;
+package com.glinboy.feader.controller;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.glinboy.feader.service.CategoryServiceApi;
 import com.glinboy.feader.service.FeedEntryServiceApi;
-import com.glinboy.feader.service.FeedServiceApi;
 
 import lombok.RequiredArgsConstructor;
 
@@ -16,7 +15,6 @@ import lombok.RequiredArgsConstructor;
 public class HomeController {
 
 	private final CategoryServiceApi categoryService;
-	private final FeedServiceApi feedService;
 	private final FeedEntryServiceApi feedEntryService;
 
 	@RequestMapping(path = {"", "/", "/index", "/index.html"})

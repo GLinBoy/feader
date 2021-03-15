@@ -1,4 +1,4 @@
-package com.glinboy.feader.application.controller;
+package com.glinboy.feader.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
