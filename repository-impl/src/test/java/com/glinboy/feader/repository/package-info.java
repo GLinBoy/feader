@@ -1,1 +1,0 @@
-package com.glinboy.feader.repository;
