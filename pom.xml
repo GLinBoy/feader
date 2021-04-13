@@ -26,6 +26,11 @@
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<maven.compiler.testSource>${java.version}</maven.compiler.testSource>
 		<maven.compiler.testTarget>${java.version}</maven.compiler.testTarget>
+		<webjar.locator.version>0.40</webjar.locator.version>
+		<webjar.uikit.version>3.6.18</webjar.uikit.version>
+		<webjar.jquery.version>3.6.0</webjar.jquery.version>
+		<webjar.chartjs.version>2.9.4</webjar.chartjs.version>
+		<webjar.font-awesome.version>4.7.0</webjar.font-awesome.version>
 		<!-- Fix Lombok issue with JDK 16 -->
 		<lombok.version>1.18.20</lombok.version>
 	</properties>
@@ -82,27 +87,27 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
-			<version>0.40</version>
+			<version>${webjar.locator.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.npm</groupId>
 			<artifactId>uikit</artifactId>
-			<version>3.6.18</version>
+			<version>${webjar.uikit.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.bower</groupId>
 			<artifactId>jquery</artifactId>
-			<version>3.6.0</version>
+			<version>${webjar.jquery.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.bower</groupId>
 			<artifactId>chart.js</artifactId>
-			<version>2.9.4</version>
+			<version>${webjar.chartjs.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars.bower</groupId>
 			<artifactId>font-awesome</artifactId>
-			<version>4.7.0</version>
+			<version>${webjar.font-awesome.version}</version>
 		</dependency>
 	</dependencies>
 
