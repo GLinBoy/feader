@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.4</version>
+		<version>2.4.5</version>
 		<relativePath />
 	</parent>
 
@@ -31,8 +31,6 @@
 		<webjar.jquery.version>3.6.0</webjar.jquery.version>
 		<webjar.chartjs.version>2.9.4</webjar.chartjs.version>
 		<webjar.font-awesome.version>4.7.0</webjar.font-awesome.version>
-		<!-- Fix Lombok issue with JDK 16 -->
-		<lombok.version>1.18.20</lombok.version>
 	</properties>
 
 	<dependencies>
@@ -71,7 +69,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
