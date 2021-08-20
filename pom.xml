@@ -31,6 +31,7 @@
     <webjar.jquery.version>3.6.0</webjar.jquery.version>
     <webjar.chartjs.version>2.9.4</webjar.chartjs.version>
     <webjar.font-awesome.version>4.7.0</webjar.font-awesome.version>
+    <modelmapper.version>2.4.2</modelmapper.version>
   </properties>
 
   <dependencies>
@@ -115,6 +116,11 @@
       <groupId>org.webjars.bower</groupId>
       <artifactId>font-awesome</artifactId>
       <version>${webjar.font-awesome.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.modelmapper</groupId>
+      <artifactId>modelmapper</artifactId>
+      <version>${modelmapper.version}</version>
     </dependency>
   </dependencies>
 
