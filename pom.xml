@@ -27,7 +27,7 @@
     <maven.compiler.testSource>${java.version}</maven.compiler.testSource>
     <maven.compiler.testTarget>${java.version}</maven.compiler.testTarget>
     <webjar.locator.version>0.45</webjar.locator.version>
-    <webjar.uikit.version>3.6.19</webjar.uikit.version>
+    <webjar.uikit.version>3.13.10</webjar.uikit.version>
     <webjar.jquery.version>3.6.0</webjar.jquery.version>
     <webjar.chartjs.version>2.9.4</webjar.chartjs.version>
     <webjar.font-awesome.version>4.7.0</webjar.font-awesome.version>
