@@ -1,12 +1,12 @@
 package com.glinboy.feader.model;
 
-import lombok.Data;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
 
 @MappedSuperclass
 //@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
