@@ -29,7 +29,7 @@
     <webjar.locator.version>0.46</webjar.locator.version>
     <webjar.uikit.version>3.15.18</webjar.uikit.version>
     <webjar.jquery.version>3.6.2</webjar.jquery.version>
-    <webjar.chartjs.version>2.9.4</webjar.chartjs.version>
+    <webjar.chartjs.version>4.2.0</webjar.chartjs.version>
     <webjar.font-awesome.version>4.7.0</webjar.font-awesome.version>
     <modelmapper.version>3.1.1</modelmapper.version>
   </properties>
