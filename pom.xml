@@ -115,7 +115,7 @@
     <dependency>
 	    <groupId>org.webjars.npm</groupId>
 	    <artifactId>chart.js</artifactId>
-	    <version>#${webjar.chartjs.version}</version>
+	    <version>${webjar.chartjs.version}</version>
 	</dependency>
     <dependency>
       <groupId>org.modelmapper</groupId>
