@@ -7,24 +7,24 @@ import java.util.HashSet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import com.glinboy.feader.model.Category;
 import com.glinboy.feader.model.Feed;
 import com.glinboy.feader.model.FeedEntry;
+import org.springframework.boot.jpa.test.autoconfigure.TestEntityManager;
 
 public class FeedEntryRepositoryTest extends RepositoryTestParent<FeedEntry, FeedEntryRepositoryApi> {
-	
+
 	private Feed defaultFeed;
 	private Category defaultCategory;
 	private FeedEntry defaultEntry;
-	
+
 	@Autowired
     private TestEntityManager entityManager;
-	
+
 	@Autowired
 	private FeedEntryRepositoryApi entryRepository;
-	
+
 	@BeforeEach
 	public void setupBeforeEachTest() {
 		String desc = "I really like Project Lombok, with use of this library you can code cleaner,"
@@ -32,13 +32,13 @@ public class FeedEntryRepositoryTest extends RepositoryTestParent<FeedEntry, Fee
 				+ "But after using @Data on an entity, and use it into another entity"
 				+ "(eg a Set of comments of a post), throw an ugly error:"
 				+ "java.lang.StackOverflowError: null. ";
-		
-		
+
+
 		Category category = new Category();
 		category.setName("unnamed");
 		category.setWeight((short) 1);
 		this.defaultCategory = entityManager.persistAndFlush(category);
-		
+
 		Feed feed = new Feed();
 		feed = new Feed();
 		feed.setTitle("GLinBoy");
@@ -52,7 +52,7 @@ public class FeedEntryRepositoryTest extends RepositoryTestParent<FeedEntry, Fee
 			}
 		});
 		this.defaultFeed = entityManager.persistAndFlush(feed);
-		
+
 		FeedEntry entry = new FeedEntry();
 		entry.setGuid("1e28e6e0-243f-4337-a4ab-0ef3c866c6d6");
 		entry.setAuthor("John Doe");

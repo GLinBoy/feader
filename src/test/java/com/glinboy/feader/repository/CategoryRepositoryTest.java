@@ -5,20 +5,20 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import com.glinboy.feader.model.Category;
+import org.springframework.boot.jpa.test.autoconfigure.TestEntityManager;
 
 public class CategoryRepositoryTest extends RepositoryTestParent<Category, CategoryRepositoryApi> {
-	
+
 	private Category defaultCategory;
-	
+
 	@Autowired
     private TestEntityManager entityManager;
-	
+
 	@Autowired
 	private CategoryRepositoryApi categoryRepository;
-	
+
 
 	@BeforeEach
 	public void setupBeforeEachTest() {
@@ -28,13 +28,13 @@ public class CategoryRepositoryTest extends RepositoryTestParent<Category, Categ
 		this.defaultCategory = entityManager.persistAndFlush(category);
 		assertThat(this.defaultCategory.getId()).isNotNull().isGreaterThan(0);
 	}
-	
+
 	@Test
 	public void readEntity() {
 		Category one = this.categoryRepository.getOne(this.defaultCategory.getId());
 		assertThat(one.getId()).isEqualTo(this.defaultCategory.getId());
 	}
-	
+
 	@Test
 	public void saveEntity() {
 		long beforeAdd = categoryRepository.count();
@@ -57,7 +57,7 @@ public class CategoryRepositoryTest extends RepositoryTestParent<Category, Categ
 		long afterAdd = categoryRepository.count();
 		assertThat(beforeAdd).isEqualTo(afterAdd);
 	}
-	
+
 	@Test
 	public void deleteEntity() {
 		long beforeDelete = categoryRepository.count();

@@ -8,7 +8,7 @@ import java.util.HashSet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.boot.jpa.test.autoconfigure.TestEntityManager;
 import org.springframework.orm.jpa.JpaObjectRetrievalFailureException;
 
 import com.glinboy.feader.model.Category;
@@ -17,22 +17,22 @@ import com.glinboy.feader.model.Feed;
 public class FeedRepositoryTest extends RepositoryTestParent<Feed, FeedRepositoryApi> {
 
 	private Feed defaultFeed;
-	
+
 	private Category defaultCategory;
-	
+
 	@Autowired
     private TestEntityManager entityManager;
-	
+
 	@Autowired
 	private FeedRepositoryApi feedRepository;
-	
+
 	@BeforeEach
 	public void setupBeforeEachTest() {
 		Category category = new Category();
 		category.setName("unnamed");
 		category.setWeight((short) 1);
 		this.defaultCategory = entityManager.persistAndFlush(category);
-		
+
 		Feed feed = new Feed();
 		feed = new Feed();
 		feed.setTitle("GLinBoy");
