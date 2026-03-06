@@ -27,11 +27,11 @@
     <maven.compiler.testSource>${java.version}</maven.compiler.testSource>
     <maven.compiler.testTarget>${java.version}</maven.compiler.testTarget>
     <webjar.locator.version>0.52</webjar.locator.version>
-    <webjar.uikit.version>3.21.13</webjar.uikit.version>
-    <webjar.jquery.version>3.7.1</webjar.jquery.version>
-    <webjar.chartjs.version>4.4.7</webjar.chartjs.version>
-    <webjar.font-awesome.version>4.7.0</webjar.font-awesome.version>
-    <modelmapper.version>3.2.2</modelmapper.version>
+    <webjar.uikit.version>3.25.12</webjar.uikit.version>
+    <webjar.jquery.version>4.0.0</webjar.jquery.version>
+    <webjar.chartjs.version>4.5.1</webjar.chartjs.version>
+    <webjar.font-awesome.version>7.2.0</webjar.font-awesome.version>
+    <modelmapper.version>3.2.6</modelmapper.version>
   </properties>
 
   <dependencies>
@@ -109,12 +109,12 @@
       <version>${webjar.uikit.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.webjars.bower</groupId>
+      <groupId>org.webjars.npm</groupId>
       <artifactId>jquery</artifactId>
       <version>${webjar.jquery.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.webjars.bower</groupId>
+      <groupId>org.webjars</groupId>
       <artifactId>font-awesome</artifactId>
       <version>${webjar.font-awesome.version}</version>
     </dependency>
